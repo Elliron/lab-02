@@ -13,8 +13,9 @@ Dar-Ci Calhourn
 Glenn Clark
 
 ## Collaborators
-Chance
-Skyler
+Chance Harmon
+Skyler Burger
+Ron Durphy
 
 Feature #1: Display images
 
