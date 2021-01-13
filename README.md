@@ -12,12 +12,25 @@ Reset CSS - https://meyerweb.com/eric/tools/css/reset/
 Dar-Ci Calhourn
 Glenn Clark
 
+## Collaborators
+Chance
+Skyler
 
 Feature #1: Display images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 15 minutes
 
-Start time: _____
+Start time: 2:16 pm
+
+Finish time: 4:06 pm
+
+Actual time needed to complete: 1 hour and 50 minutes
+
+Feature #2: Filter images
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 4:24 pm
 
 Finish time: _____
 
