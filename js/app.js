@@ -1,5 +1,6 @@
 'use strict';
 
+
 // Feature #2: Filter images
 // Why are we implementing this feature?
 // As a user, I want to be able to filter the images so that I can view only images that match a keyword.
@@ -74,8 +75,28 @@ $.ajax('/data/page-1.json').then(stuffThatComesBack => {
   // console.log(animalsArray);
   //New animal constructor complete, code is finished, next step is animalsArray that we made loops through and calls render function at each instance of loop
   animalsArray.forEach((animalImg) => {
-    if 
     animalImg.render();
   });
 });
 
+// // Clicking and 'filtering'
+// $('button').on('click', () => { // In today's lab you need to filter only the images with the specific keyword
+//   //goal is to only show The Clifford li
+
+//   // get rid of the other ones
+//   // iterate and check if the name is clifford
+//   // if the name is clifford : render
+
+//   // OR
+
+//   // target all the list items and hide them
+//   // target the one with an h2 with text of 'clifford' and show it
+//   $('li').hide();
+//   $('li:contains(Clifford)').show();
+
+// });
+
+$('select').on('click', () => {
+
+
+});
