@@ -1,6 +1,6 @@
 'use strict';
 
-
+let toggleVariable = 'data/page-1.json';
 // Feature #2: Filter images
 // Why are we implementing this feature?
 // As a user, I want to be able to filter the images so that I can view only images that match a keyword.
@@ -43,32 +43,35 @@ Animals.prototype.render = function () {
 };
 
 // ajax retrieves objects from json file and puts it in new array, calls render function
-$.ajax('/data/page-1.json').then(stuffThatComesBack => {
+function ajaxFunction() {
 
-  stuffThatComesBack.forEach((animal) => {
-    Animals.animalsArray.push(new Animals(animal.title, animal.image_url, animal.description, animal.keyword, animal.horns));
+  $.ajax(toggleVariable).then(stuffThatComesBack => {
+
+    stuffThatComesBack.forEach((animal) => {
+      Animals.animalsArray.push(new Animals(animal.title, animal.image_url, animal.description, animal.keyword, animal.horns));
+    });
+    console.log(Animals.animalsArray);
+
+    //New animal constructor complete, code is finished, next step is Animals.animalsArray that we made loops through and calls render function at each instance of loop
+    const filterKeyword = [];
+
+    Animals.animalsArray.forEach((animal) => {
+
+      // populate filter
+      if (!filterKeyword.includes(animal.keyword)) {
+        const $option = $(`<option>${animal.keyword}</option>`);
+        $option.attr('value', animal.keyword);
+        $('select').append($option);
+        filterKeyword.push(animal.keyword);
+      }
+
+      // console.log(animal);
+      animal.render();
+
+    });
   });
-  console.log(Animals.animalsArray);
-
-  //New animal constructor complete, code is finished, next step is Animals.animalsArray that we made loops through and calls render function at each instance of loop
-  const filterKeyword = [];
-
-  Animals.animalsArray.forEach((animal) => {
-
-    // populate filter
-    if (!filterKeyword.includes(animal.keyword)) {
-      const $option = $(`<option>${animal.keyword}</option>`);
-      $option.attr('value', animal.keyword);
-      $('select').append($option);
-      filterKeyword.push(animal.keyword);
-    }
-
-    // console.log(animal);
-    animal.render();
-
-  });
-});
-
+}
+ajaxFunction();
 // .then(Animals.populateFilter);
 
 Animals.populateFilter = () => {
@@ -90,3 +93,18 @@ $('select').on('change', (event) => {
   // documentation: Sara Russert showed us how she targeted a section by class
   $(`section[class=${userValue}]`).show();
 });
+
+$('button').on('click', (event) => {
+  event.preventDefault();
+  toggleVariable = toggleVariable === 'data/page-1.json' ? 'data/page-2.json':'data/page-1.json';
+  // if (toggleVariable === 'data/page-1.json') {
+  //   toggleVariable = 'data/page-2.json';
+  // } else if (toggleVariable === 'data/page-2.json') {
+  //   toggleVariable = 'data/page-1.json';
+  // }
+  $('section').remove();
+  $('option').not(':first').remove();
+  Animals.animalsArray = [];
+  ajaxFunction();
+});
+

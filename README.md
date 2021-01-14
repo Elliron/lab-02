@@ -19,6 +19,7 @@ Glenn Clark
 - Ron Durphy
 - Bade Habib
 - Sara Russert
+- Nicco Ryan
 
 ## Feature #1: Display images
 
@@ -49,3 +50,45 @@ Glenn Clark
 - Finish time: 5:40 pm 1/13/2021
 
 - Actual time needed to complete: 35 minutes
+
+## Lab 03
+
+###  Feature 1 Pagination
+
+- Estimate of time needed to complete: 1 hour
+
+ - start time: 6:25 pm 1/13/2021
+
+ - Finish time: 7:27 pm 1/13/2021
+
+ - Actual time needed to complete: 1 hour and 3 minutes
+
+### Feature 2 Pagination
+
+- Estimate of time needed to complete: _____
+
+ - start time: _____
+
+ - Finish time: _____
+
+ - Actual time needed to complete: _____
+
+### Feature 3 Pagination
+
+- Estimate of time needed to complete: _____
+
+ - start time: _____
+
+ - Finish time: _____
+
+ - Actual time needed to complete: _____
+
+### Feature 4 Pagination
+
+- Estimate of time needed to complete: _____
+
+ - tart time: _____
+
+ - Finish time: _____
+
+ - Actual time needed to complete: _____
