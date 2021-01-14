@@ -63,7 +63,17 @@ Glenn Clark
 
  - Actual time needed to complete: 1 hour and 3 minutes
 
-### Feature 2 Pagination
+### Feature 2 Templating
+
+- Estimate of time needed to complete: 30 minutes
+
+ - start time: 7:46 pm 1/13/2021
+
+ - Finish time: 8:36
+
+ - Actual time needed to complete: 50 minutes
+
+### Feature 3 Styling and Flexbox
 
 - Estimate of time needed to complete: _____
 
@@ -73,17 +83,7 @@ Glenn Clark
 
  - Actual time needed to complete: _____
 
-### Feature 3 Pagination
-
-- Estimate of time needed to complete: _____
-
- - start time: _____
-
- - Finish time: _____
-
- - Actual time needed to complete: _____
-
-### Feature 4 Pagination
+### Feature 4 Sorth the images
 
 - Estimate of time needed to complete: _____
 
