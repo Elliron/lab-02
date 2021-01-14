@@ -2,37 +2,40 @@
 
 ## Title: Lab-02 Jquery Selectors and Events
 
-
-
 ## Links:
-page-1.json - https://codefellows.github.io/code-301-guide/curriculum/class-02/lab/starter-code/page-1.json
-Reset CSS - https://meyerweb.com/eric/tools/css/reset/
+
+- page-1.json - https://codefellows.github.io/code-301-guide/curriculum/class-02/lab/starter-code/page-1.json
+- Reset CSS - https://meyerweb.com/eric/tools/css/reset/
 
 ## Author:
+
 Dar-Ci Calhourn
 Glenn Clark
 
 ## Collaborators
-Chance Harmon
-Skyler Burger
-Ron Durphy
 
-Feature #1: Display images
+- Chance Harmon
+- Skyler Burger
+- Ron Durphy
+- Bade Habib
+- Sara Russert
 
-Estimate of time needed to complete: 15 minutes
+## Feature #1: Display images
 
-Start time: 2:16 pm
+- Estimate of time needed to complete: 15 minutes
 
-Finish time: 4:06 pm
+- Start time: 2:16 pm
 
-Actual time needed to complete: 1 hour and 50 minutes
+- Finish time: 4:06 pm
 
-Feature #2: Filter images
+- Actual time needed to complete: 1 hour and 50 minutes
 
-Estimate of time needed to complete: 1 hour
+## Feature #2: Filter images
 
-Start time: 4:24 pm
+- Estimate of time needed to complete: 1 hour
 
-Finish time: _____
+- Start time: 4:24 pm
 
-Actual time needed to complete: _____
+- Finish time: _____
+
+- Actual time needed to complete: _____
