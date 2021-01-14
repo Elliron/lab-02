@@ -23,24 +23,52 @@ function Animals(name, url, description, keyword, horns) {
 }
 
 // Renders to page
+// Animals.prototype.render = function () {
+
+//   const photoTemplate = $('#photo-template').html();
+//   const $animalRender = $(`<section>${photoTemplate}</section>`);
+//   $animalRender.addClass(`${this.keyword}`);
+//   const $h2 = $animalRender.find('h2');
+
+//   $h2.text(this.title);
+
+//   const $img = $animalRender.find('img');
+//   $img.attr('src', this.image_url);
+//   $img.attr('alt', this.title);
+//   const $description = $animalRender.find('p');
+//   $description.text(this.description);
+
+//   $('main').append($animalRender);
+
+// };
+
 Animals.prototype.render = function () {
-
+  console.log('rendering');
   const photoTemplate = $('#photo-template').html();
-  const $animalRender = $(`<section>${photoTemplate}</section>`);
-  $animalRender.addClass(`${this.keyword}`);
-  const $h2 = $animalRender.find('h2');
+  // const $animalRender = $(`<section>${photoTemplate}</section>`);
+  // const object = this;
 
-  $h2.text(this.title);
-
-  const $img = $animalRender.find('img');
-  $img.attr('src', this.image_url);
-  $img.attr('alt', this.title);
-  const $description = $animalRender.find('p');
-  $description.text(this.description);
-
-  $('main').append($animalRender);
-
+  const renderHtml = Mustache.render(photoTemplate, this);
+  // return renderHtml;
+  $('main').append(renderHtml);
+  // console.log();
 };
+
+// Dog.prototype.render = function(){
+//   const htmlTemplateString = $('#dog-template').html();
+//   const object = this;
+
+//   const renderedHtml = Mustache.render(htmlTemplateString, object);
+//   $('ul').append(renderedHtml);
+// };
+
+{/* <template id="dog-template" type="text/x-tmpl-mustache">
+<li>
+  <h2>{{name}}</h2>
+  <img src="{{image_url}}" alt="{{hobbies}}">
+  <p>{{hobbies}}</p>
+</li>
+</template> */}
 
 // ajax retrieves objects from json file and puts it in new array, calls render function
 function ajaxFunction() {
@@ -50,7 +78,7 @@ function ajaxFunction() {
     stuffThatComesBack.forEach((animal) => {
       Animals.animalsArray.push(new Animals(animal.title, animal.image_url, animal.description, animal.keyword, animal.horns));
     });
-    console.log(Animals.animalsArray);
+    // console.log(Animals.animalsArray);
 
     //New animal constructor complete, code is finished, next step is Animals.animalsArray that we made loops through and calls render function at each instance of loop
     const filterKeyword = [];
@@ -65,7 +93,7 @@ function ajaxFunction() {
         filterKeyword.push(animal.keyword);
       }
 
-      // console.log(animal);
+      console.log(filterKeyword);
       animal.render();
 
     });
@@ -86,23 +114,23 @@ Animals.populateFilter = () => {
 
 $('select').on('change', (event) => {
   // event.preventDefault();
-  $('section').hide();
+  $('div').hide();
   let userValue = event.target.value;
   console.log(userValue);
 
   // documentation: Sara Russert showed us how she targeted a section by class
-  $(`section[class=${userValue}]`).show();
+  $(`div[class=${userValue}]`).show();
 });
 
 $('button').on('click', (event) => {
   event.preventDefault();
-  toggleVariable = toggleVariable === 'data/page-1.json' ? 'data/page-2.json':'data/page-1.json';
+  toggleVariable = toggleVariable === 'data/page-1.json' ? 'data/page-2.json' : 'data/page-1.json';
   // if (toggleVariable === 'data/page-1.json') {
   //   toggleVariable = 'data/page-2.json';
   // } else if (toggleVariable === 'data/page-2.json') {
   //   toggleVariable = 'data/page-1.json';
   // }
-  $('section').remove();
+  $('div').remove();
   $('option').not(':first').remove();
   Animals.animalsArray = [];
   ajaxFunction();
