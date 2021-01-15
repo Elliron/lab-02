@@ -75,15 +75,15 @@ Glenn Clark
 
 ### Feature 3 Styling and Flexbox
 
-- Estimate of time needed to complete: _____
+- Estimate of time needed to complete: 30 minutes
 
- - start time: _____
+ - start time: 5:57 pm 1/14/2021
 
- - Finish time: _____
+ - Finish time: 7 pm 1/14/2021
 
- - Actual time needed to complete: _____
+ - Actual time needed to complete: 1 hour 3 minutes
 
-### Feature 4 Sorth the images
+### Feature 4 Sort the images
 
 - Estimate of time needed to complete: _____
 
