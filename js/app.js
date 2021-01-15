@@ -43,7 +43,7 @@ function Animals(name, url, description, keyword, horns) {
 // };
 
 Animals.prototype.render = function () {
-  console.log('rendering');
+  // console.log('rendering');
   const photoTemplate = $('#photo-template').html();
   // const $animalRender = $(`<section>${photoTemplate}</section>`);
   // const object = this;
@@ -93,17 +93,39 @@ function ajaxFunction() {
         filterKeyword.push(animal.keyword);
       }
 
-      console.log(filterKeyword);
+      // console.log(filterKeyword);
       animal.render();
 
     });
+  });
+  $('.sort').on('click', (event) => {
+    event.preventDefault();
+    let sortingBy;
+    if ($(event.target).text() === 'Sort by Title'){
+      sortingBy = 'title';
+    } else {
+      sortingBy = 'horns';
+    }
+    //sort by alphabet
+    Animals.animalsArray.sort((left, right) => {
+      $('div').remove();
+      if (left[sortingBy] < right[sortingBy]) {
+        return -1;
+      } else if (left[sortingBy] > right[sortingBy]) {
+        return 1;
+      } else {
+        return 0;
+      }
+      // console.log(Animals.animalsArray);
+    });
+    Animals.animalsArray.forEach(animal => animal.render());
   });
 }
 ajaxFunction();
 // .then(Animals.populateFilter);
 
 Animals.populateFilter = () => {
-  console.log('populateFilter');
+  // console.log('populateFilter');
   const filterKeyword = [];
 
   // for each loop animals array - inside of it, push the keyword into the filterKeyword array
@@ -122,7 +144,7 @@ $('select').on('change', (event) => {
   $(`div[class=${userValue}]`).show();
 });
 
-$('button').on('click', (event) => {
+$('.toggle-page').on('click', (event) => {
   event.preventDefault();
   toggleVariable = toggleVariable === 'data/page-1.json' ? 'data/page-2.json' : 'data/page-1.json';
   // if (toggleVariable === 'data/page-1.json') {
@@ -135,4 +157,5 @@ $('button').on('click', (event) => {
   Animals.animalsArray = [];
   ajaxFunction();
 });
+
 
