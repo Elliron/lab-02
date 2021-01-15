@@ -85,10 +85,10 @@ Glenn Clark
 
 ### Feature 4 Sort the images
 
-- Estimate of time needed to complete: _____
+- Estimate of time needed to complete: 1 hour
 
- - tart time: _____
+ - start time: 7 pm
 
- - Finish time: _____
+ - Finish time: 7:49 pm
 
- - Actual time needed to complete: _____
+ - Actual time needed to complete: 49 minutes
