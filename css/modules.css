@@ -1,3 +1,19 @@
 header h1 {
   font-family: 'Lobster', cursive;
 }
+
+div {
+  background-color: blue;
+}
+
+
+@media (min-width: 768px) {
+  div {
+    background-color: yellow;
+  }
+}
+@media (min-width: 1000px) {
+  div {
+    background-color: red;
+  }
+}
